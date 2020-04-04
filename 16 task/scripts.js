@@ -1,10 +1,13 @@
-let siblings = {
-    1: [2,4],
-    2: [3,5],
-    3: [6],
-    4: [5,7],
-    5: [6,8],
-    6: [9],
-    7: [8],
-    8: [9]
+const sumOfNumber = () => {
+    let number = 2**1000;
+    let bigNumber = BigInt(number);
+    let str = bigNumber + '';
+    
+    return str.split('').reduce( (accum, elem) => {
+        return accum + (+elem);
+    }, 0);
+    
 };
+
+console.log(sumOfNumber());
+
